@@ -1,0 +1,272 @@
+/*
+ * Globals
+ */
+
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+body { 
+	padding-top: 50px; 
+*background-color: #333;
+  *background-color: #3a92c8;
+  *background: radial-gradient(circle,#94d2f8,#3a92c8);
+  *-webkit-box-shadow: inset 0 0 100px rgba(50,150,220,.5);
+          *box-shadow: inset 0 0 100px rgba(50,150,220,.5);
+}
+
+/*
+ * Base structure
+ */
+
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  *padding-bottom: 50px;
+  
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 1px 3px rgba(0,0,0,.5);
+  
+  
+}
+.site-wrapper-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* Padding for spacing */
+.inner {
+  padding: 30px;
+}
+
+#cover-maps { position: absolute; z-index:0; margin-top:-3em}
+
+/*
+ * Header
+ */
+
+ 
+.masthead {
+	*background: #333;
+	padding-bottom: 1em;
+	background: rgba(27, 54, 71, 0.8);
+	border-bottom : 1px solid rgb(27, 54, 71);
+	 -webkit-box-shadow: 0 0 10px rgba(0,0,50,.5);
+			box-shadow: 0 0 10px rgba(0,0,50,.5);
+} 
+ 
+.masthead-brand {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #5cb85c;
+}
+
+.masthead-nav > li {
+  display: inline-block;
+}
+.masthead-nav > li + li {
+  margin-left: 20px;
+}
+.masthead-nav > li > a {
+  padding-right: 0;
+  padding-left: 0;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff; /* IE8 proofing */
+  color: rgba(255,255,255,.75);
+  border-bottom: 2px solid transparent;
+}
+.masthead-nav > li > a:hover,
+.masthead-nav > li > a:focus {
+  background-color: transparent;
+  border-bottom-color: #a9a9a9;
+  border-bottom-color: rgba(255,255,255,.25);
+}
+.masthead-nav > .active > a,
+.masthead-nav > .active > a:hover,
+.masthead-nav > .active > a:focus {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+
+/*
+ * Cover
+ */
+
+.cover {
+  margin-top: 4em;
+  padding: 20px;
+  position: relative;
+  z-index: 7;
+}
+.cover .btn-lg {
+  padding: 10px 20px;
+  font-weight: bold;
+}
+
+.cover-heading {
+	color: #777;
+}
+
+/*
+.mobil { color: #449d44;}
+.rumah { color: #fcd04b;}
+.motor { color: #3071a9;}
+*/
+
+.cover-categories {
+	margin-top: 4em;
+}
+
+.img-circle {
+	width: 100px;
+	height: 100px;
+	border : 1px solid #ccc;
+}
+
+.img-container {
+  display: inline-block;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 0 150px rgba(150,150,150,.5);
+			box-shadow: 0 0 150px rgba(10,10,150,.5);
+	border:4px solid transparent;
+	border-left:4px solid #aaa;
+	border-bottom:4px solid #aaa;
+	z-index:10;
+	transition: all 1s;
+}
+
+.img-container:hover {
+	border:4px solid transparent;
+	border-right:4px solid #aaa;
+	border-top:4px solid #aaa;
+}
+
+.img-container > a:hover { text-decoration: none;}
+
+
+.img {
+	height: 100%;
+  z-index: 1;
+  transition: all 1s;
+}
+.img img {
+  max-width: 100%;
+  height: 100%;
+  
+}
+
+
+.img-container:hover .img {
+	opacity: 0.6;
+	transform: scale(1.5) rotate(-10deg);
+}
+
+.img-caption {
+  *width: 200px;
+  height: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background: rgba(0,0,0,.8);
+  text-align: center;
+  z-index: 2;
+  font-weight: 300;
+  transition: all .5s;
+}
+
+.img-container:hover .img-caption {
+  transform: translateY(-220%);
+}
+
+
+/*
+ * Footer
+ */
+
+.mastfoot {
+  color: #999; /* IE8 proofing */
+  color: rgba(255,255,255,.5);
+}
+
+
+
+@media (max-width: 408px) {
+  
+  .cover {
+	margin-top: 3em;
+  }
+}
+
+
+/*
+ * Affix and center
+ */
+
+  
+@media (min-width: 768px) {
+  .masthead-brand {
+    float: left;
+  }
+  .masthead-nav {
+    float: right;
+  }
+    
+  /* Pull out the header and footer */
+  .masthead {
+    position: fixed;
+	z-index:10;
+    top: 0;
+  }
+  .mastfoot {
+    *position: fixed;
+    bottom: 0;
+  }
+  /* Start the vertical centering */
+  .site-wrapper-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+	.masthead > .inner {
+		width: 75em;
+		margin: 0 auto;
+	}
+  
+  .mastfoot,
+  #cover-maps,
+  .cover-container {
+    width: 75em;
+  }
+  
+  .cover-rumah{
+	margin-top: 3em;
+  }
+}
+
+#body-content { margin-bottom: 0px;}
